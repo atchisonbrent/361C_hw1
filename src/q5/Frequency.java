@@ -21,6 +21,9 @@ public class Frequency implements Callable<Integer> {
     		int remainder = A.length % numThreads;
     		
     		/* Start threads in loop */
+    		// Potentially make array with each thread counting and setting values to own index
+    		// Total up array values at the end
+    		// Just need to figure out how shared arrays would work and assign threads integer identifiers
     		for (int i = 0; i < numThreads; i++) {
     			Frequency t = new Frequency();
     			t.start();
